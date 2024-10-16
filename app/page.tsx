@@ -1,6 +1,7 @@
 import { BackgroundLinesDemo } from "./Components/Background";
 import { NavbarDemo } from "./Components/Navbar";
 import { StickyScrollRevealDemo } from "./Components/Sticky_Scroll";
+import { TimelineDemo } from "./Components/TimeLine";
 
 export default function (){
   return (
@@ -8,6 +9,7 @@ export default function (){
       <NavbarDemo />
       <BackgroundLinesDemo />
       <StickyScrollRevealDemo />
+      <TimelineDemo />
     </div>
   )
 }
