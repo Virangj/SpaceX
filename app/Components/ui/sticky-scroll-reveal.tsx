@@ -15,7 +15,7 @@ export const StickyScroll = ({
   contentClassName?: string;
 }) => {
   const [activeCard, setActiveCard] = useState(0);
-  const ref = useRef<any>(null);
+  const ref = useRef<HTMLDivElement>(null);
 
   const { scrollYProgress } = useScroll({
     container: ref,
@@ -60,16 +60,21 @@ export const StickyScroll = ({
     "linear-gradient(to bottom right, var(--orange-500), var(--yellow-500))",
   ];
 
-  const [backgroundGradient, setBackgroundGradient] = useState(linearGradients[0]);
+  const [backgroundGradient, setBackgroundGradient] = useState(
+    linearGradients[0]
+  );
 
   useEffect(() => {
-    setBackgroundGradient(linearGradients[activeCard % linearGradients.length]);
+    setBackgroundGradient(
+      linearGradients[activeCard % linearGradients.length]
+    );
   }, [activeCard]);
 
   return (
     <motion.div
       animate={{
-        backgroundColor: backgroundColors[activeCard % backgroundColors.length],
+        backgroundColor:
+          backgroundColors[activeCard % backgroundColors.length],
       }}
       className="h-[30rem] overflow-y-auto no-scrollbar flex justify-center relative space-x-10 p-10"
       ref={ref}
