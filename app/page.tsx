@@ -1,6 +1,6 @@
 import { BackgroundLinesDemo } from "./Components/Background";
 import { FocusCardsDemo } from "./Components/FocusCard";
-import { NavbarDemo } from "./Components/Navbar";
+// import { NavbarDemo } from "./Components/Navbar";
 import { StickyScrollRevealDemo } from "./Components/Sticky_Scroll";
 import { AnimatedTestimonialsDemo } from "./Components/Testimonials";
 import { TimelineDemo } from "./Components/TimeLine";
