@@ -1,6 +1,6 @@
-import plugin from 'tailwindcss/plugin';
 const defaultTheme = require("tailwindcss/defaultTheme");
 const colors = require("tailwindcss/colors");
+const TailwindScrollBar = require('tailwind-scrollbar-hide');
 
 const {
   default: flattenColorPalette,
@@ -20,19 +20,7 @@ module.exports = {
   },
   plugins: [
     addVariablesForColors,
-    plugin(function ({ addUtilities }) {
-      addUtilities({
-        '.no-scrollbar': {
-          /* Hide scrollbar for WebKit browsers */
-          '&::-webkit-scrollbar': {
-            display: 'none',
-          },
-          /* Hide scrollbar for IE and Firefox */
-          '-ms-overflow-style': 'none',
-          'scrollbar-width': 'none',
-        },
-      });
-    }),
+    TailwindScrollBar
   ]
 };
 
