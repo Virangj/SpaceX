@@ -1,19 +1,18 @@
-import type { Metadata } from "next";
-import "./globals.css";
+import './globals.css';
+import Header from '@/Components/Header';
+import { Inter } from 'next/font/google';
 
-export const metadata: Metadata = {
-  title: "Space X",
-  description: "At SpaceX, we are revolutionizing space technology with the ultimate goal of enabling human life on Mars. Founded by Elon Musk in 2002, SpaceX is committed to reducing the cost of space travel and making it accessible to everyone. Our groundbreaking advancements in rocket technology have transformed the aerospace industry, allowing us to undertake ambitious missions that were once considered impossible.",
-};
+const inter = Inter({ subsets: ['latin'] });
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <body>
+      <body className={inter.className}>
+        <Header />
         {children}
       </body>
     </html>
